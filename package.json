@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-german-company-data",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "n8n community node for verified German company data: KYB company profiles (Handelsregister, VIES VAT, Bundesanzeiger), insolvency register checks and Impressum contact extraction — powered by Apify actors.",
 	"keywords": [
 		"n8n-community-node-package",
