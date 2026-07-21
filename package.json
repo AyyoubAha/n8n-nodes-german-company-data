@@ -59,12 +59,13 @@
 		]
 	},
 	"devDependencies": {
-		"@types/node": "^22.0.0",
-		"@typescript-eslint/parser": "^7.18.0",
-		"eslint": "^8.57.1",
+		"@types/node": "^26.1.1",
+		"@typescript-eslint/parser": "^8.65.0",
+		"eslint": "^9.39.5",
 		"eslint-plugin-n8n-nodes-base": "^1.16.7",
-		"n8n-workflow": "^1.82.0",
-		"typescript": "^5.5.0"
+		"jsonc-eslint-parser": "^2.4.0",
+		"n8n-workflow": "^2.16.0",
+		"typescript": "^6.0.3"
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"
