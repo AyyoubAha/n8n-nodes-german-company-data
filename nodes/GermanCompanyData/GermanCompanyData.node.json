@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-german-company-data.germanCompanyData",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Sales", "Data & Storage"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://docs.apify.com/platform/integrations/api"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://apify.com/ayyouba/dach-company-intel"
+			}
+		]
+	}
+}
