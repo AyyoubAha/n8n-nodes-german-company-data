@@ -120,7 +120,7 @@ export class GermanCompanyData implements INodeType {
 				type: 'string',
 				required: true,
 				default: '',
-				placeholder: 'zalando.de, DE811907980, Siemens AG',
+				placeholder: 'e.g. zalando.de, DE811907980, Siemens AG',
 				description:
 					'Companies to resolve — each entry may be a website/domain, a company name or a VAT ID (USt-IdNr.); the type is auto-detected. Separate multiple entries with commas or new lines, or use an expression that returns an array.',
 				displayOptions: {
@@ -135,7 +135,7 @@ export class GermanCompanyData implements INodeType {
 				type: 'string',
 				required: true,
 				default: '',
-				placeholder: 'Galeria Karstadt Kaufhof GmbH, Kettler GmbH',
+				placeholder: 'e.g. Galeria Karstadt Kaufhof GmbH, Kettler GmbH',
 				description:
 					'Company names to check against the insolvency register — the full legal name works best. Separate multiple entries with commas or new lines, or use an expression that returns an array.',
 				displayOptions: {
@@ -150,7 +150,7 @@ export class GermanCompanyData implements INodeType {
 				type: 'string',
 				required: true,
 				default: '',
-				placeholder: 'zalando.de, hellofresh.de',
+				placeholder: 'e.g. zalando.de, hellofresh.de',
 				description:
 					'German company websites to extract Impressum and contact data from. Separate multiple entries with commas or new lines, or use an expression that returns an array.',
 				displayOptions: {
