@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-german-company-data",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "n8n community node for verified German company data: KYB company profiles (Handelsregister, VIES VAT, Bundesanzeiger), insolvency register checks and Impressum contact extraction — powered by Apify actors.",
 	"keywords": [
 		"n8n-community-node-package",
@@ -28,6 +28,13 @@
 		"email": "kontakt@ayyoubaharchi.de"
 	},
 	"homepage": "https://apify.com/ayyouba/dach-company-intel",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AyyoubAha/n8n-nodes-german-company-data.git"
+	},
+	"bugs": {
+		"url": "https://github.com/AyyoubAha/n8n-nodes-german-company-data/issues"
+	},
 	"engines": {
 		"node": ">=20.15"
 	},
