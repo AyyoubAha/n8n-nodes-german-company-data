@@ -1,10 +1,12 @@
 import { cpSync, mkdirSync } from 'node:fs';
 
 mkdirSync('dist/nodes/GermanCompanyData', { recursive: true });
-cpSync(
-	'nodes/GermanCompanyData/germanCompanyData.svg',
-	'dist/nodes/GermanCompanyData/germanCompanyData.svg',
-);
+mkdirSync('dist/credentials', { recursive: true });
+
+for (const file of ['germanCompanyData.svg', 'germanCompanyData.dark.svg']) {
+	cpSync(`nodes/GermanCompanyData/${file}`, `dist/nodes/GermanCompanyData/${file}`);
+	cpSync(`credentials/${file}`, `dist/credentials/${file}`);
+}
 cpSync(
 	'nodes/GermanCompanyData/GermanCompanyData.node.json',
 	'dist/nodes/GermanCompanyData/GermanCompanyData.node.json',

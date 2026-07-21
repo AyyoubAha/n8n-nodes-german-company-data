@@ -2,6 +2,7 @@ import type {
 	IAuthenticateGeneric,
 	ICredentialTestRequest,
 	ICredentialType,
+	Icon,
 	INodeProperties,
 } from 'n8n-workflow';
 
@@ -10,7 +11,11 @@ export class GermanCompanyDataApi implements ICredentialType {
 
 	displayName = 'German Company Data (Apify) API';
 
-	// eslint-disable-next-line n8n-nodes-base/cred-class-field-documentation-url-miscased
+	icon: Icon = {
+		light: 'file:germanCompanyData.svg',
+		dark: 'file:germanCompanyData.dark.svg',
+	};
+
 	documentationUrl = 'https://docs.apify.com/platform/integrations/api';
 
 	properties: INodeProperties[] = [

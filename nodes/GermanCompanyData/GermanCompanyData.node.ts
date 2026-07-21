@@ -8,7 +8,7 @@ import type {
 	INodeTypeDescription,
 	JsonObject,
 } from 'n8n-workflow';
-import { jsonParse, NodeApiError, NodeOperationError, sleep } from 'n8n-workflow';
+import { jsonParse, NodeApiError, NodeConnectionTypes, NodeOperationError, sleep } from 'n8n-workflow';
 
 const APIFY_BASE_URL = 'https://api.apify.com';
 
@@ -61,7 +61,10 @@ export class GermanCompanyData implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'German Company Data',
 		name: 'germanCompanyData',
-		icon: 'file:germanCompanyData.svg',
+		icon: {
+			light: 'file:germanCompanyData.svg',
+			dark: 'file:germanCompanyData.dark.svg',
+		},
 		group: ['transform'],
 		version: 1,
 		subtitle:
@@ -72,8 +75,8 @@ export class GermanCompanyData implements INodeType {
 			name: 'German Company Data',
 		},
 		usableAsTool: true,
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [
 			{
 				name: 'germanCompanyDataApi',
@@ -412,7 +415,11 @@ export class GermanCompanyData implements INodeType {
 					});
 					continue;
 				}
-				throw error;
+				if (error instanceof NodeApiError || error instanceof NodeOperationError) {
+					const nodeError = error;
+					throw nodeError;
+				}
+				throw new NodeOperationError(this.getNode(), error as Error, { itemIndex: i });
 			}
 		}
 

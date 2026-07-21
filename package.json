@@ -65,7 +65,6 @@
 		"@typescript-eslint/parser": "^8.65.0",
 		"eslint": "^9.39.5",
 		"eslint-plugin-n8n-nodes-base": "^1.16.7",
-		"jsonc-eslint-parser": "^2.4.0",
 		"n8n-workflow": "^2.16.0",
 		"prettier": "^3.9.6",
 		"release-it": "^20.2.1",
